@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+  <id><![CDATA[Hide description in lists (category, manufacturer, search etc)]]></id>
+  <name><![CDATA[Hide description in lists (category, manufacturer, search etc)]]></name>
+  <code>hide_description_in_lists</code>
+  <version>1.0.0</version>
+  <author>digital4u (Nikolas Branis)</author>
+  <link>https://www.digital4u.gr/</link>
+  <file path="catalog/view/theme/*/template/extension/module/{bestseller,featured,latest,special}.twig|catalog/view/theme/*/template/product/{category,manufacturer_info,search,special}.twig">
+    <operation>
+      <search><![CDATA[<p>{{ product.description }}</p>]]></search>
+      <add position="replace"><![CDATA[{# <p>{{ product.description }}</p> #}]]></add>
+    </operation>
+  </file>
+</modification>
